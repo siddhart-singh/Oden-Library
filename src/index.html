@@ -6,13 +6,72 @@
     <title>Library</title>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="/dist/output.css" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./input.css" />
   </head>
 
-  <body>
-    <h1 class="h-screen w-screen bg-zinc-800 text-3xl font-bold underline">
-      Hello World!
-    </h1>
+  <body class="h-screen w-screen">
+    <div class="container m-auto">
+      <header class="flex justify-center py-8 align-middle">
+        <svg
+          class="h-12 w-12 text-gray-800 dark:text-black"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 20"
+        >
+          <path
+            d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z"
+          />
+        </svg>
+        <h1 class="text-5xl">Library</h1>
+      </header>
+      <main class="p-12">
+        <form class="">
+          <legend>Enter book details</legend>
+          <fieldset class="flex justify-center gap-8 py-4 align-middle">
+            <div
+              class="border- relative flex w-min flex-1 justify-center align-middle"
+            >
+              <input
+                type="text"
+                name="book"
+                id="book"
+                placeholder="Book"
+                class="w-full rounded border-2 border-solid border-gray-300 px-2.5 pb-3 pt-6"
+              />
+              <label
+                for="book"
+                class="absolute left-2 top-1 -translate-y-3 scale-90 font-bold opacity-0 transition-all"
+                >Book</label
+              >
+            </div>
+            <div
+              class="border- align-middlen relative flex w-min flex-1 justify-center"
+            >
+              <input
+                type="text"
+                name="author"
+                id="author"
+                placeholder="Author"
+                class="w-full rounded border-2 border-solid border-gray-300 px-2.5 pb-3 pt-6"
+              />
+              <label
+                for="author"
+                class="absolute left-2 top-1 -translate-y-3 scale-90 font-bold opacity-0 transition-all"
+                >Author</label
+              >
+            </div>
+            <select
+              name="read-option"
+              class="rounded border-2 border-solid border-gray-200 px-6 py-3"
+            >
+              <option value="read">Read</option>
+              <option value="not read">Not Read</option>
+            </select>
+            <button class="px-12 py-3 bg-green-600 font-bold font text-white rounded hover:bg-green-700" type="submit">Add</button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
   </body>
 </html>
