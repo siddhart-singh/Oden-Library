@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-main form input:focus + label {
+main form input:focus + label,
+main form input:valid + label {
   display: block;
   opacity: 100%;
   transform: translateY(0);
   scale: 90%;
+}
+
+main form .form-input:placeholder-shown {
+  background-color: white;
+  border-color: rgb(229 231 235);
 }
