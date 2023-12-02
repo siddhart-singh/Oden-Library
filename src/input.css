@@ -27,3 +27,13 @@ main form input:invalid + label {
   outline-color: rgb(239 68 68);
 }
 
+
+@layer components {
+  tr{
+    @apply flex grow py-4
+  }
+
+  td{
+    @apply grow basis-0 text-center
+  }
+}
