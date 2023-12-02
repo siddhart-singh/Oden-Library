@@ -18,5 +18,6 @@ addBookToLibrary("test", "test", true);
 
 bookForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  bookForm.reset();
   console.dir(e.target[1].value);
 });
