@@ -37,10 +37,10 @@ main form input:invalid + label {
   }
 
   .status-btn {
-    @apply  active:bg-gray-600 hover:bg-gray-500 rounded bg-gray-400 px-6 py-2 font-bold text-white;
+    @apply  active:bg-blue-700 hover:bg-blue-600 rounded bg-blue-500 px-6 py-2 font-bold text-white text-sm;
   }
 
   .delete-btn {
-    @apply active:bg-red-700 hover:bg-red-600 rounded bg-red-500 px-6 py-2 font-bold text-white;
+    @apply active:bg-red-700 hover:bg-red-600 rounded bg-red-500 px-6 py-2 font-bold text-white text-sm;
   }
 }
