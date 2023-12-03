@@ -568,17 +568,32 @@ video {
   }
 }
 
-tr {
-  display: flex;
-  flex-grow: 1;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.tbl-row {
+  border-width: 1px;
 }
 
-td {
-  flex-grow: 1;
-  flex-basis: 0px;
+.tbl-data {
+  border-width: 1px;
+  padding: 0.5rem;
   text-align: center;
+}
+
+.delete-btn {
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.delete-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .absolute {
@@ -610,6 +625,11 @@ td {
   margin-bottom: 2rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flex {
   display: flex;
 }
@@ -630,6 +650,10 @@ td {
   width: 3rem;
 }
 
+.w-3\/12 {
+  width: 25%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -643,20 +667,16 @@ td {
   width: 100vw;
 }
 
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-screen-2xl {
+  max-width: 1536px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.flex-auto {
-  flex: 1 1 auto;
-}
-
-.grow {
-  flex-grow: 1;
-}
-
-.basis-0 {
-  flex-basis: 0px;
 }
 
 .-translate-y-3 {
@@ -682,6 +702,10 @@ td {
   border-radius: 0.25rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -700,9 +724,9 @@ td {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.bg-green-600 {
+.bg-green-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .p-12 {
@@ -711,6 +735,14 @@ td {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-12 {
@@ -749,10 +781,6 @@ td {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .align-middle {
@@ -846,9 +874,9 @@ main form input:invalid + label {
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-green-700:hover {
+.hover\:bg-green-600:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
 @media (prefers-color-scheme: dark) {

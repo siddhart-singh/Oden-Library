@@ -27,13 +27,16 @@ main form input:invalid + label {
   outline-color: rgb(239 68 68);
 }
 
-
 @layer components {
-  tr{
-    @apply flex grow py-4
+  .tbl-row {
+    @apply border;
   }
 
-  td{
-    @apply grow basis-0 text-center
+  .tbl-data {
+    @apply border p-2 text-center;
+  }
+
+  .delete-btn {
+    @apply hover:bg-red-600 rounded bg-red-500 px-6 py-2 font-bold text-white;
   }
 }

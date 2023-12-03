@@ -20,22 +20,24 @@ function displayBook() {
     for (const key in book) {
       let td = document.createElement("td");
       td.innerText = book[key];
+      td.classList.add("tbl-data");
       tr.appendChild(td);
     }
     const td = document.createElement("td");
+    td.classList.add("tbl-data");
     const deleteBtn = document.createElement("Button");
-  deleteBtn.innerText = "DELETE";
-  deleteBtn.dataset.id = myLibrary.length;
-  deleteBtn.classList.add("delete-btn");
+    deleteBtn.innerText = "DELETE";
+    deleteBtn.dataset.id = myLibrary.length;
+    deleteBtn.classList.add("delete-btn");
     td.appendChild(deleteBtn);
     tr.appendChild(td);
+    tr.classList.add("tbl-row");
     mainTable.appendChild(tr);
-  })
+  });
 }
 
 bookForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  addBookToLibrary(e.target[1].value, e.target[2].value, e.target[3].value)
+  addBookToLibrary(e.target[1].value, e.target[2].value, e.target[3].value);
   bookForm.reset();
 });
-

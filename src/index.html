@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./input.css" />
   </head>
 
-  <body class="h-screen w-screen">
+  <body class="h-screen w-screen max-w-screen-2xl mx-auto">
     <div class="container m-auto">
       <header class="flex justify-center py-8 align-middle">
         <svg
@@ -72,21 +72,19 @@
               <option value="not read">Not Read</option>
             </select>
             <button
-              class="font rounded bg-green-600 px-12 py-3 font-bold text-white hover:bg-green-700"
+              class="rounded bg-green-500 px-12 py-3 font-bold text-white hover:bg-green-600"
               type="submit"
             >
-              Add
+              ADD
             </button>
           </fieldset>
         </form>
-        <table class="main-table w-full flex-auto justify-center my-8 align-middle">
-          <tr class="flex grow">
-            <th class="grow basis-0">Book Name</th>
-            <th class="grow basis-0">Author</th>
-            <th class="grow basis-0">Status</th>
-            <th class="grow basis-0">Remove</th>
-          </tr>
-         
+        <table class="main-table my-8 w-full border">
+          <tr class="tbl-row border">
+            <th class="w-3/12 border p-3">Book Name</th>
+            <th class="w-3/12 border p-3">Author</th>
+            <th class="w-3/12 border p-3">Status</th>
+            <th class="w-3/12 border p-3">Remove</th>
         </table>
       </main>
     </div>
