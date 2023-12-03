@@ -36,7 +36,11 @@ main form input:invalid + label {
     @apply border p-2 text-center;
   }
 
+  .status-btn {
+    @apply  active:bg-gray-600 hover:bg-gray-500 rounded bg-gray-400 px-6 py-2 font-bold text-white;
+  }
+
   .delete-btn {
-    @apply hover:bg-red-600 rounded bg-red-500 px-6 py-2 font-bold text-white;
+    @apply active:bg-red-700 hover:bg-red-600 rounded bg-red-500 px-6 py-2 font-bold text-white;
   }
 }

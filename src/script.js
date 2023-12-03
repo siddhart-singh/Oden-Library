@@ -19,9 +19,19 @@ function displayBook() {
     let tr = document.createElement("tr");
     for (const key in book) {
       let td = document.createElement("td");
-      td.innerText = book[key];
       td.classList.add("tbl-data");
+      if(book[key] == "Read" || book[key] =="Not Read") {
+        const statusBtn = document.createElement("Button");
+    statusBtn.innerText = book[key];
+    statusBtn.classList.add("status-btn");
+    td.appendChild(statusBtn);
+    tr.appendChild(td);
+      }
+      else {
+        td.innerText = book[key];
       tr.appendChild(td);
+      }
+      
     }
     const td = document.createElement("td");
     td.classList.add("tbl-data");

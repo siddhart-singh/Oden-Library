@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./input.css" />
   </head>
 
-  <body class="h-screen w-screen max-w-screen-2xl mx-auto">
+  <body class="mx-auto h-screen w-screen max-w-screen-2xl">
     <div class="container m-auto">
       <header class="flex justify-center py-8 align-middle">
         <svg
@@ -68,11 +68,11 @@
               required
               class="rounded border-2 border-solid border-gray-200 p-2"
             >
-              <option value="read">Read</option>
-              <option value="not read">Not Read</option>
+              <option value="Read">Read</option>
+              <option value="Not Read">Not Read</option>
             </select>
             <button
-              class="rounded bg-green-500 px-12 py-3 font-bold text-white hover:bg-green-600"
+              class="rounded bg-green-500 px-12 py-3 font-bold text-white hover:bg-green-600 active:bg-green-700"
               type="submit"
             >
               ADD
@@ -85,6 +85,7 @@
             <th class="w-3/12 border p-3">Author</th>
             <th class="w-3/12 border p-3">Status</th>
             <th class="w-3/12 border p-3">Remove</th>
+          </tr>
         </table>
       </main>
     </div>
