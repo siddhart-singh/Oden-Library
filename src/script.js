@@ -75,12 +75,16 @@ function deleteEntry(e) {
   });
 }
 
+function title(str="") {
+  return str.split(" ").map(e => e.slice(0,1).toUpperCase() + e.slice(1).toLowerCase()).join(" ");
+}
+
 bookForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addBookToLibrary(
     id++,
-    e.target[1].value,
-    e.target[2].value,
+    title(e.target[1].value),
+    title(e.target[2].value),
     e.target[3].value,
   );
   console.log(myLibrary[0]);
