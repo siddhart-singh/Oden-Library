@@ -75,7 +75,11 @@ document.addEventListener("click", (e) => {
 
   if (e.target.closest(".delete-btn")) {
     const target = e.target.closest(".delete-btn");
-    myLibrary.splice(target.dataset.id, 1);
+    myLibrary.forEach((book, index) => {
+      if (book.sno == target.dataset.id) {
+        myLibrary.splice(index, 1);
+      }
+    });
     [...mainTable.children].forEach((child) => {
       mainTable.removeChild(child);
     });
