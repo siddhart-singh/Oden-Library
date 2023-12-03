@@ -66,15 +66,21 @@ bookForm.addEventListener("submit", (e) => {
 document.addEventListener("click", (e) => {
   if (e.target.closest(".status-btn")) {
     const target = e.target.closest(".status-btn");
-    target.innerText = myLibrary[+target.dataset.id].bookStatus();
+    myLibrary.forEach((book) => {
+      if (book.sno == target.dataset.id) {
+        target.innerText = myLibrary[+target.dataset.id].bookStatus();
+      }
+    });
   }
 
   if (e.target.closest(".delete-btn")) {
     const target = e.target.closest(".delete-btn");
     myLibrary.splice(target.dataset.id, 1);
     [...mainTable.children].forEach((child) => {
-      mainTable.removeChild(child)
-  });
-    myLibrary.forEach((book, index) => {displayBook(book, index + 1)})
+      mainTable.removeChild(child);
+    });
+    myLibrary.forEach((book, index) => {
+      displayBook(book, index + 1);
+    });
   }
 });
