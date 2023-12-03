@@ -674,6 +674,10 @@ video {
   height: 100vh;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -715,6 +719,10 @@ video {
   width: 0.5rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .max-w-screen-2xl {
   max-width: 1536px;
 }
@@ -736,6 +744,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-8 {
@@ -787,6 +799,10 @@ video {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-12 {
@@ -932,5 +948,10 @@ main form input:invalid + label {
   .dark\:text-black {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
