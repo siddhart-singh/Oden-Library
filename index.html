@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
     <script src="./script.js" defer></script>
-    <!-- <link rel="stylesheet" href="../dist/output.css" />
-    <link rel="stylesheet" href="./input.css" /> -->
-    <link rel="stylesheet" href="./build.css" />
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <link rel="stylesheet" href="./input.css" />
   </head>
 
   <body class="mx-auto h-screen w-screen max-w-screen-2xl">
     <div class="container m-auto">
-      <header class="flex justify-between py-8 px-12 align-middle">
-        <h1 class="text-5xl flex gap-1">
+      <header class="flex justify-between px-12 py-8 align-middle">
+        <h1 class="flex gap-1 text-5xl">
           <svg
             class="h-12 w-12 text-gray-800 dark:text-black"
             aria-hidden="true"
@@ -29,7 +29,7 @@
         </h1>
         <a href="https://github.com/siddhart-singh/Oden-Library">
           <svg
-            class="w-12 h-12 text-gray-800 dark:text-black"
+            class="h-12 w-12 text-gray-800 dark:text-black"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -90,7 +90,7 @@
               <option value="Not Read">Not Read</option>
             </select>
             <button
-              class="rounded bg-green-500 px-12 py-3 font-bold text-white hover:bg-green-600 active:bg-green-700 text-sm"
+              class="rounded bg-green-500 px-12 py-3 text-sm font-bold text-white hover:bg-green-600 active:bg-green-700"
               type="submit"
             >
               ADD
@@ -99,7 +99,7 @@
         </form>
         <table class="my-8 w-full border">
           <thead>
-            <tr class="tbl-row border">
+            <tr class="tbl-row border group-hover:bg-slate-50;">
               <th class="w-1 border p-2 text-sm">S.No.</th>
               <th class="w-3/12 border p-3 text-sm">Book Name</th>
               <th class="w-3/12 border p-3 text-sm">Author</th>
