@@ -51,6 +51,30 @@ function displayBook(book, sno) {
   mainTable.appendChild(tr);
 }
 
+function toggleStatus(e) {
+  const target = e.target.closest(".status-btn");
+  myLibrary.forEach((book, index) => {
+    if (book.sno == target.dataset.id) {
+      target.innerText = myLibrary[index].bookStatus();
+    }
+  });
+}
+
+function deleteEntry(e) {
+  const target = e.target.closest(".delete-btn");
+  myLibrary.forEach((book, index) => {
+    if (book.sno == target.dataset.id) {
+      myLibrary.splice(index, 1);
+    }
+  });
+  [...mainTable.children].forEach((child) => {
+    mainTable.removeChild(child);
+  });
+  myLibrary.forEach((book, index) => {
+    displayBook(book, index + 1);
+  });
+}
+
 bookForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addBookToLibrary(
@@ -65,26 +89,10 @@ bookForm.addEventListener("submit", (e) => {
 
 document.addEventListener("click", (e) => {
   if (e.target.closest(".status-btn")) {
-    const target = e.target.closest(".status-btn");
-    myLibrary.forEach((book) => {
-      if (book.sno == target.dataset.id) {
-        target.innerText = myLibrary[+target.dataset.id].bookStatus();
-      }
-    });
+    toggleStatus(e);
   }
 
   if (e.target.closest(".delete-btn")) {
-    const target = e.target.closest(".delete-btn");
-    myLibrary.forEach((book, index) => {
-      if (book.sno == target.dataset.id) {
-        myLibrary.splice(index, 1);
-      }
-    });
-    [...mainTable.children].forEach((child) => {
-      mainTable.removeChild(child);
-    });
-    myLibrary.forEach((book, index) => {
-      displayBook(book, index + 1);
-    });
+    deleteEntry(e);
   }
 });
