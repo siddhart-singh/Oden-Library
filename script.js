@@ -107,7 +107,6 @@ class Book {
     return this.read;
   }
 }
-
 const myLibrary = new Library();
 
 bookForm.addEventListener("submit", (e) => {
@@ -130,4 +129,3 @@ document.addEventListener("click", (e) => {
     myLibrary.deleteEntry(e);
   }
 });
-
