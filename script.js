@@ -107,6 +107,7 @@ class Book {
     return this.read;
   }
 }
+
 const myLibrary = new Library();
 
 bookForm.addEventListener("submit", (e) => {
